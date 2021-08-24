@@ -30,7 +30,7 @@ class FetchCurrenciesController extends Controller
 
     private function saveCurrency($data)
     {
-        Currency::query()->updateOrCreate(
+        $currency = Currency::query()->updateOrCreate(
             ['char_code' => $data['CharCode']],
             [
                 'name' => $data['Name'],
@@ -38,5 +38,10 @@ class FetchCurrenciesController extends Controller
                 'updated_at' => now(),
             ]
         );
+
+        $currency->history()->create(['date' => now(), 'rate' => $data['Value'] / $data['Nominal'] ]);
+
     }
+
+
 }
