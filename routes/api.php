@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\FetchCurrenciesController;
+use App\Http\Controllers\ToJsonController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -16,3 +17,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('fetch', FetchCurrenciesController::class);
+Route::get('json', ToJsonController::class);

@@ -10,15 +10,11 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
 </head>
 <body class="antialiased">
-@foreach($currencies as $currency)
-    <div><h2>{{$currency->char_code}} - {{$currency->rate}}</h2></div>
-@endforeach
-
-
-{{--       <div id="app">--}}
-
-
-{{--       </div>--}}
-
+{{--@foreach($currencies as $currency)--}}
+{{--    <div><h2>{{$currency->char_code}} - {{$currency->rate}}</h2></div>--}}
+{{--@endforeach--}}
+       <div id="app">
+            <Currencies></Currencies>
+       </div>
 </body>
 </html>

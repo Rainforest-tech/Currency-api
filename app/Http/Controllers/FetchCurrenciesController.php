@@ -39,7 +39,7 @@ class FetchCurrenciesController extends Controller
             ]
         );
 
-        $currency->history()->create(['date' => now(), 'rate' => $data['Value'] / $data['Nominal'] ]);
+//        $currency->history()->create(['date' => now(), 'rate' => $data['Value'] / $data['Nominal'] ]);
 
     }
 
